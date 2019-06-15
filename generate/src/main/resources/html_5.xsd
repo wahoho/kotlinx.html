@@ -311,6 +311,7 @@
 
             <xsd:element ref="table"/>
             <xsd:element ref="textarea"/>
+            <xsd:element ref="template"/>
             <xsd:element ref="time"/>
 
             <xsd:element ref="ul"/>
@@ -1109,6 +1110,8 @@
     </xsd:element>
 
     <xsd:element name="div" type="simpleFlowContentElement"/>
+
+    <xsd:element name="template" type="simpleFlowContentElement"/>
 
     <!--=================== Interactive content =======================================-->
 

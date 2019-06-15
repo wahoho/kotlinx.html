@@ -625,6 +625,12 @@ public fun TagConsumer<HTMLElement>.tbody(classes : String? = null, block : TBOD
 public fun TagConsumer<HTMLElement>.td(classes : String? = null, block : TD.() -> Unit = {}) : HTMLTableCellElement = TD(attributesMapOf("class", classes), this).visitAndFinalize(this, block) as HTMLTableCellElement
 
 /**
+ * Template
+ */
+@HtmlTagMarker
+public fun TagConsumer<HTMLElement>.template(classes : String? = null, block : TEMPLATE.() -> Unit = {}) : HTMLTemplateElement = TEMPLATE(attributesMapOf("class", classes), this).visitAndFinalize(this, block) as HTMLTemplateElement
+
+/**
  * Multi-line text field
  */
 @HtmlTagMarker

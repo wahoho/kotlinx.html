@@ -624,6 +624,12 @@ fun <T, C : TagConsumer<T>> C.tbody(classes : String? = null, block : TBODY.() -
 fun <T, C : TagConsumer<T>> C.td(classes : String? = null, block : TD.() -> Unit = {}) : T = TD(attributesMapOf("class", classes), this).visitAndFinalize(this, block)
 
 /**
+ * Template
+ */
+@HtmlTagMarker
+fun <T, C : TagConsumer<T>> C.template(classes : String? = null, block : TEMPLATE.() -> Unit = {}) : T = TEMPLATE(attributesMapOf("class", classes), this).visitAndFinalize(this, block)
+
+/**
  * Multi-line text field
  */
 @HtmlTagMarker

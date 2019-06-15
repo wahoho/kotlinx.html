@@ -137,6 +137,12 @@ fun FlowContent.pre(classes : String? = null, block : PRE.() -> Unit = {}) : Uni
 fun FlowContent.table(classes : String? = null, block : TABLE.() -> Unit = {}) : Unit = TABLE(attributesMapOf("class", classes), consumer).visit(block)
 
 /**
+ * Template
+ */
+@HtmlTagMarker
+fun FlowContent.template(classes : String? = null, block : TEMPLATE.() -> Unit = {}) : Unit = TEMPLATE(attributesMapOf("class", classes), consumer).visit(block)
+
+/**
  * Unordered list
  */
 @HtmlTagMarker
